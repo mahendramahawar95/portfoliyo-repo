@@ -1,0 +1,200 @@
+@import "tailwindcss";
+/* @source "../../../packages/ui/src*.{ts,tsx}"; */
+/* Animated grid background: linear-gradient grid + radial-gradient glows.
+   Only `transform` and `opacity` are animated. */
+
+.grid-bg {
+  --grid-cell: 56px;
+  --grid-line: rgba(15, 23, 42, 0.08);
+  --grid-base: #ffffff;
+
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: var(--grid-base);
+  pointer-events: none;
+}
+
+/* Static mask: fades the grid out toward the edges */
+.grid-bg__mask {
+  position: absolute;
+  inset: 0;
+  -webkit-mask-image: radial-gradient(
+    ellipse 75% 65% at 50% 45%,
+    #000 25%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 75% 65% at 50% 45%,
+    #000 25%,
+    transparent 100%
+  );
+}
+
+/* The grid itself: two crossing linear-gradients.
+   Oversized by one cell so it can slide without showing gaps. */
+.grid-bg__grid {
+  position: absolute;
+  inset: calc(var(--grid-cell) * -1);
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: var(--grid-cell) var(--grid-cell);
+  will-change: transform;
+  animation: grid-bg-pan 6s linear infinite;
+}
+
+/* Moving exactly one cell makes the loop seamless */
+@keyframes grid-bg-pan {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(var(--grid-cell), var(--grid-cell), 0);
+  }
+}
+
+/* Glowing areas */
+.grid-bg__glow {
+  position: absolute;
+  border-radius: 50%;
+  will-change: transform, opacity;
+}
+
+.grid-bg__glow--blue {
+  top: -10%;
+  right: 8%;
+  width: 46vmax;
+  height: 46vmax;
+  background: radial-gradient(
+    circle,
+    rgba(3, 167, 255, 0.35) 0%,
+    rgba(3, 167, 255, 0) 70%
+  );
+  animation: grid-bg-float-a 16s ease-in-out infinite alternate;
+}
+
+.grid-bg__glow--orange {
+  bottom: -14%;
+  left: 6%;
+  width: 42vmax;
+  height: 42vmax;
+  background: radial-gradient(
+    circle,
+    rgba(255, 115, 0, 0.3) 0%,
+    rgba(255, 115, 0, 0) 68%
+  );
+  animation: grid-bg-float-b 20s ease-in-out infinite alternate;
+}
+
+.grid-bg__glow--mix {
+  top: 28%;
+  left: 30%;
+  width: 52vmax;
+  height: 38vmax;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(3, 167, 255, 0.18) 0%,
+    rgba(255, 115, 0, 0.08) 45%,
+    transparent 72%
+  );
+  animation: grid-bg-pulse 12s ease-in-out infinite alternate;
+}
+
+@keyframes grid-bg-float-a {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.85;
+  }
+  to {
+    transform: translate3d(-6vmax, 5vmax, 0) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes grid-bg-float-b {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.85;
+  }
+  to {
+    transform: translate3d(7vmax, -4vmax, 0) scale(1.12);
+    opacity: 1;
+  }
+}
+
+@keyframes grid-bg-pulse {
+  from {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+  to {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+/* Dark theme: <GridBackground theme="dark" /> */
+.grid-bg--dark {
+  --grid-line: rgba(155, 213, 255, 0.1);
+  --grid-base: #0b1220;
+}
+
+.grid-bg--dark .grid-bg__glow--blue {
+  background: radial-gradient(
+    circle,
+    rgba(3, 167, 255, 0.45) 0%,
+    rgba(3, 167, 255, 0) 70%
+  );
+}
+
+.grid-bg--dark .grid-bg__glow--orange {
+  background: radial-gradient(
+    circle,
+    rgba(255, 115, 0, 0.38) 0%,
+    rgba(255, 115, 0, 0) 68%
+  );
+}
+
+/* Respect reduced motion: keep the look, remove the movement */
+@media (prefers-reduced-motion: reduce) {
+  .grid-bg__grid,
+  .grid-bg__glow {
+    animation: none;
+  }
+}
+
+
+
+.animated-grid {
+  background-image:
+    linear-gradient(
+      rgba(59, 130, 246, 0.08) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(59, 130, 246, 0.08) 1px,
+      transparent 1px
+    );
+
+  background-size: 45px 45px;
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    120deg,
+    #eff6ff,
+    #ffffff,
+    #e0f2fe,
+    #f5f3ff
+  );
+  background-size: 300% 300%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}

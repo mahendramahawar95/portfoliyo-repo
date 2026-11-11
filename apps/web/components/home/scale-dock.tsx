@@ -76,7 +76,7 @@ export function ScaleDock() {
   const open = hovered ?? active;
 
   return (
-    <Section className="bg-section-first py-3xl">
+    <Section className="py-3xl">
       <div className="container">
         <div className="text-center">
           <Badge className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm ">

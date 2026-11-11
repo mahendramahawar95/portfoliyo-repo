@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import "./animated-grid-background.css";
 
 type AnimatedGridBackgroundProps = {
   /** "light" matches your white gradient mesh, "dark" suits dark sections */

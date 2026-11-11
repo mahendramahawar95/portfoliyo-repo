@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import type { ComponentPropsWithoutRef, ElementType } from "react";
+import "./MagneticButton.css"
 
 type MagneticButtonProps = ComponentPropsWithoutRef<"button"> & {
   /** Render as a link instead of a button */

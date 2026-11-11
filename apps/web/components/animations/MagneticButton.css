@@ -1,0 +1,72 @@
+
+
+
+/* Wrapper that defines the magnetic field (never moves) */
+.magnetic-field {
+  display: inline-block;
+}
+
+.magnetic-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
+
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #03a7ff 0%, #ff7300 100%);
+  box-shadow:
+    0 6px 20px -6px rgba(3, 167, 255, 0.55),
+    0 4px 14px -6px rgba(255, 115, 0, 0.4);
+
+  will-change: transform;
+  transition: box-shadow 300ms ease;
+}
+
+.magnetic-btn:hover {
+  box-shadow:
+    0 12px 32px -8px rgba(3, 167, 255, 0.6),
+    0 8px 22px -8px rgba(255, 115, 0, 0.5);
+}
+
+.magnetic-btn:focus-visible {
+  outline: 2px solid #03a7ff;
+  outline-offset: 4px;
+}
+
+.magnetic-btn:active {
+  filter: brightness(0.96);
+}
+
+.magnetic-btn__label {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* Disable movement for reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  .magnetic-btn,
+  .magnetic-btn__label {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Optional outline variant: <MagneticButton className="magnetic-btn--outline"> */
+.magnetic-btn--outline {
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: inset 0 0 0 1.5px rgba(3, 167, 255, 0.5);
+}
+
+.magnetic-btn--outline:hover {
+  box-shadow:
+    inset 0 0 0 1.5px #03a7ff,
+    0 10px 24px -10px rgba(3, 167, 255, 0.45);
+}
+

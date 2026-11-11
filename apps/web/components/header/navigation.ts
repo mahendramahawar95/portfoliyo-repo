@@ -49,6 +49,16 @@ export const navigation: NavItem[] = [
       },
     ],
   },
+   {
+    label: "Work",
+    href: "/work",
+    children: [
+      { label: "Case Studies", href: "/work/case-studies" },
+      { label: "Portfolio", href: "/work/portfolio" },
+      { label: "Client Stories", href: "/work/client-stories" },
+      { label: "Trusted Partners", href: "/work/partners" },
+    ],
+  },
   {
     label: "Technologies",
     href: "/technologies",
@@ -61,16 +71,7 @@ export const navigation: NavItem[] = [
       { label: "React Native", href: "/technologies/react-native" },
     ],
   },
-  {
-    label: "Work",
-    href: "/work",
-    children: [
-      { label: "Case Studies", href: "/work/case-studies" },
-      { label: "Portfolio", href: "/work/portfolio" },
-      { label: "Client Stories", href: "/work/client-stories" },
-      { label: "Trusted Partners", href: "/work/partners" },
-    ],
-  },
+ 
   {
     label: "Process",
     href: "/process",

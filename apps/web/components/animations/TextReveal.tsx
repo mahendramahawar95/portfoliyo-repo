@@ -2,7 +2,7 @@
 
 import { Fragment, useEffect, useRef, useState } from "react";
 import type { CSSProperties, ElementType } from "react";
-import "../app/globals.css";
+import "./TextReveal.css";
 
 type TextRevealProps = {
   /** The text to reveal. In "lines" mode, use "\n" to separate lines. */

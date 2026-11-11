@@ -132,7 +132,7 @@ function TestimonialCard({ item }: { item: Testimonial }) {
 
 export function ImpactTestimonials() {
   return (
-    <Section className="bg-section-first py-3xl">
+    <Section className="py-3xl">
       <div className="container">
         <div className="mx-auto max-w-default px-md">
           <Carousel

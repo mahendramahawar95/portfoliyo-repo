@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import type { CSSProperties, ReactNode } from "react";
+import "./TiltCard.css"
 
 type TiltCardProps = {
   children: ReactNode;

@@ -33,7 +33,7 @@ export function TrustSection() {
   return (
     <Section
       id="testimonial"
-      className="bg-section-first overflow-hidden py-3xl"
+      className="overflow-hidden py-3xl"
     >
       <div className="container">
         <div className="text-center">

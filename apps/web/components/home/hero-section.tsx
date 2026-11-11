@@ -8,6 +8,7 @@ import ParticleNetwork from "../../components/animations/ParticleNetwork";
 import RotatingText from "../../components/animations/RotatingText";
 import { cn } from "@repo/ui/lib/cn";
 import { Badge } from "@repo/ui";
+import MainBackground from "../animations/MainBackground";
 export interface HeroSectionProps {
   badge?: string;
   heading?: ReactNode;
@@ -26,29 +27,7 @@ const defaultTexts = [
   "AI Driven precision.",
 ];
 
-function DefaultHeroBackground() {
-  return (
-    <div
-      aria-hidden="true"
-      className="fixed inset-0 -z-10 h-full w-full overflow-hidden"
-    >
-      <LightGradientMesh
-        orangeX={0.0} // left circle position (0-1)
-        blueX={0.78} // right circle position (0-1)
-        drift={0.05} // how far they move; 0 = no horizontal movement
-        size={0.5} // smaller = wider gap
-      />
-      <ParticleNetwork
-        density={9} // particles per 100,000px²
-        maxParticles={50}
-        speed={0.4}
-        connectionDistance={150}
-        mouseRadius={190}
-        interaction="attract" // or "repel"
-      />
-    </div>
-  );
-}
+
 
 export function HeroSection({
   badge = "Building Digital Solutions · AI-Ready Engineering",
@@ -56,12 +35,11 @@ export function HeroSection({
   texts = defaultTexts,
   description = "We are an AI-driven Digital solutions company that combines thoughtful design with modern engineering to build secure, scalable digital solutions that help businesses innovate and grow.",
   cta = <MagneticButton>Get started</MagneticButton>,
-  background = <DefaultHeroBackground />,
   className,
 }: HeroSectionProps) {
   return (
     <>
-      {background}
+ 
 
       <section
         className={cn(
