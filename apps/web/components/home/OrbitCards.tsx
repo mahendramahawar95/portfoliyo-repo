@@ -71,7 +71,7 @@ export function OrbitCards({
   className = "",
 }: OrbitCardsProps) {
   return (
-    <div className={`orbit-section ${className}`}>
+    <div className={`orbit-section orbit relative ${className}`}>
       <div
         className="orbit-scene"
         style={
@@ -83,10 +83,11 @@ export function OrbitCards({
         {/* Orbit rings */}
         <div className="orbit-ring orbit-ring--outer" />
         <div className="orbit-ring orbit-ring--inner" />
+          <span className="orbit-dot" aria-hidden="true"></span>
 
         {/* Central circle */}
           <div
-      className="absolute left-1/2 top-[53%] z-5 grid size-orbit-center -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/95 bg-orbit-center shadow-orbit-center ring-10 ring-white/25 backdrop-blur-[7px]">
+      className="absolute left-1/2 top-[50%] z-5 grid size-orbit-center -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/95 bg-orbit-center shadow-orbit-center ring-10 ring-white/25 backdrop-blur-[7px]">
       {/* Soft glow behind the circle */}
       <div
         aria-hidden="true"

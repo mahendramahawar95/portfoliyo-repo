@@ -76,7 +76,7 @@ function TickerGroup({ items, hidden }: { items: string[]; hidden?: boolean }) {
 export function AiHero({
   badge = "AI Capabilities",
   brandPrefix = "AI",
-  brandName = "fullstackdev",
+  brandName = "Fullstackdev",
   title = "Your AI operating layer for products, operations, and engineering.",
   lead = "We design and deploy practical AI systems that improve execution speed without sacrificing control, quality, or team clarity.",
   primaryCta = (
@@ -102,12 +102,12 @@ export function AiHero({
     <Section
       aria-label={`${brandPrefix} at ${brandName}`}
       className={cn(
-        "relative isolate overflow-hidden bg-section-workflow py-3xl text-white",
+        "relative isolate overflow-hidden text-white",
         className,
       )}
     >
       <div className="container">
-      <div className="mx-auto px-md">
+      <div className="mx-auto ">
         <div className="grid items-center gap-xl lg:grid-cols-2">
           {/* Copy */}
           <div>
@@ -123,7 +123,7 @@ export function AiHero({
 
             <h1
               style={stagger(1)}
-              className="stagger-item mb-4 flex flex-wrap items-baseline gap-x-[0.18em] gap-y-[0.08em] pe-[0.12em] text-brand font-bold leading-[1.05] tracking-tighter text-white"
+              className="text-display font-extrabold mb-4 flex flex-wrap items-baseline gap-x-4 gap-y-2 pe-3 text-brand font-bold leading-none tracking-tighter text-white"
             >
               <span>{brandPrefix}</span>
               <span
@@ -132,7 +132,7 @@ export function AiHero({
               >
                 @
               </span>
-              <span className="me-[-0.1em] inline-block bg-brand-gradient bg-clip-text pe-[0.18em] text-transparent">
+              <span className="bg-linear-to-r from-white via-trust-blue via-55% to-trust-orange bg-clip-text bg-no-repeat text-transparent rtl:bg-linear-to-l">
                 {brandName}
               </span>
             </h1>

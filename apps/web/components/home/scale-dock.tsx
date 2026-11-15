@@ -76,7 +76,7 @@ export function ScaleDock() {
   const open = hovered ?? active;
 
   return (
-    <Section className="py-3xl">
+    <Section className="">
       <div className="container">
         <div className="text-center">
           <Badge className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm ">
@@ -97,7 +97,7 @@ export function ScaleDock() {
             className="mb-3xl"
           />
         </div>
-        <div className="mx-auto max-w-default px-md">
+        <div className="mx-auto max-w-default">
           <div
             role="list"
             onMouseLeave={() => setHovered(null)}

@@ -2,7 +2,7 @@ import { Badge, LogoMarquee, Section, SectionHeading } from "@repo/ui";
 
 export default function Marquee() {
   return (
-    <Section className="py-3xl">
+    <Section className="">
       <div className="container">
         <div className="text-center">
           <Badge className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm ">
@@ -23,7 +23,7 @@ export default function Marquee() {
             className="mb-0"
           />
         </div>
-        <div className="mx-auto max-w-default px-md">
+        <div className="mx-auto max-w-default">
           <p className="mb-xl text-center text-kicker font-bold uppercase tracking-kicker text-content-secondary">
             Trusted Partners
           </p>

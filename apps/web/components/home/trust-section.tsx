@@ -33,7 +33,7 @@ export function TrustSection() {
   return (
     <Section
       id="testimonial"
-      className="overflow-hidden py-3xl"
+      className="overflow-hidden"
     >
       <div className="container">
         <div className="text-center">
@@ -55,7 +55,7 @@ export function TrustSection() {
             className="mb-0"
           />
         </div>
-        <div className="mx-auto mt-3xl grid max-w-default gap-lg px-md grid-cols-1 lg:grid-cols-2">
+        <div className="mx-auto mt-3xl grid max-w-default gap-lg grid-cols-1 lg:grid-cols-2">
           {/* Column 1: Practice */}
           <div
             className={`${panel} relative flex flex-col justify-between border-trust-blue/16 bg-linear-165 from-trust-blue/10 via-trust-blue/3.5 via-42% to-white/55 p-panel-lg [animation-delay:0ms] rtl:bg-linear-195`}

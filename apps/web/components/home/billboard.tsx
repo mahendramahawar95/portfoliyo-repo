@@ -23,9 +23,9 @@ export function PreFooterBillboard({
   ctaHref?: string;
 }) {
   return (
-    <Section className="px-2 py-12">
+    <Section className="">
       <div className="container">
-        <TiltCard className="tilt-card p-0 w-full rounded-3xl">
+        <TiltCard className="tilt-card p-0 px-xs w-full rounded-3xl">
           <div className="relative isolate animate-fade-up overflow-hidden rounded-3xl border border-trust-blue/18 bg-ink-900 px-billboard-x py-billboard-y text-white">
             {/* Decorative layers */}
 

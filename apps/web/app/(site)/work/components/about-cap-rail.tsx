@@ -104,7 +104,7 @@ export function AboutCapRail({
   );
 
   return (
-    <Section className={cn("relative z-1 py-3xl", className)}>
+    <Section className={cn("relative z-1", className)}>
       <div className="container">
         <div className="mx-auto grid gap-xl lg:w-11/12 lg:grid-cols-[minmax(0,4fr)_minmax(0,7fr)]">
           {/* Lead */}

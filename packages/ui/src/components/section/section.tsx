@@ -22,7 +22,7 @@ export function Section({
 }: SectionProps) {
   return (
     <section
-      className={cn("w-full", className, bg, gradient)}
+      className={cn("w-full py-2xl", className, bg, gradient)}
       id={id}
       {...props}
     >

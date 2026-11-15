@@ -1,7 +1,7 @@
 // apps/web/components/sections/pre-footer.tsx
 import type { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@repo/ui";
+import { Button, Section } from "@repo/ui";
 import { cn } from "@repo/ui/lib/cn";
 
 export interface ImpactNumber {
@@ -48,9 +48,9 @@ export function PreFooter({
   className,
 }: PreFooterProps) {
   return (
-    <section className={cn("relative z-1 px-2 py-3xl", className)}>
+    <Section className={cn("relative z-1", className)}>
       <div className="container">
-      <div className="mx-auto max-w-default px-md">
+      <div className="mx-auto max-w-default">
         <div className="grid items-stretch gap-md lg:grid-cols-12">
           {/* Left: call to action */}
           <div className="flex h-full flex-col items-start rounded-card bg-trust-blue/10 p-xl lg:col-span-5">
@@ -106,6 +106,6 @@ export function PreFooter({
         </div>
       </div>
       </div>
-    </section>
+    </Section>
   );
 }

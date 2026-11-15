@@ -143,7 +143,7 @@ export function AboutContent({
   const [featured, ...rest] = metrics;
 
   return (
-    <Section id="about-content" className={cn("relative z-1 py-3xl", className)}>
+    <Section id="about-content" className={cn("relative z-1", className)}>
       <div className="container">
         {/* Header */}
         <div className="mx-auto mb-xl  animate-fade-up text-center">

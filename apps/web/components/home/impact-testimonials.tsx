@@ -132,9 +132,9 @@ function TestimonialCard({ item }: { item: Testimonial }) {
 
 export function ImpactTestimonials() {
   return (
-    <Section className="py-3xl">
+    <Section className="">
       <div className="container">
-        <div className="mx-auto max-w-default px-md">
+        <div className="mx-auto max-w-default">
           <Carousel
             delay={4500}
             loop={testimonials.length > 1}

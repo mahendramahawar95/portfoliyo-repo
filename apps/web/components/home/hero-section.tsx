@@ -7,7 +7,7 @@ import ParticleNetwork from "../../components/animations/ParticleNetwork";
 // import TextReveal from "../../components/TextReveal";
 import RotatingText from "../../components/animations/RotatingText";
 import { cn } from "@repo/ui/lib/cn";
-import { Badge } from "@repo/ui";
+import { Badge, Section } from "@repo/ui";
 import MainBackground from "../animations/MainBackground";
 export interface HeroSectionProps {
   badge?: string;
@@ -41,13 +41,13 @@ export function HeroSection({
     <>
  
 
-      <section
+      <Section
         className={cn(
           "relative isolate w-full overflow-hidden bg-transparent",
           className,
         )}
       >
-        <div className="relative z-10 mx-auto max-w-5xl px-md py-3xl text-center">
+        <div className="relative z-10 mx-auto max-w-5xl text-center">
           <Badge className="mb-md inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
             <span
               className="size-2 rounded-full bg-accent"
@@ -73,7 +73,7 @@ export function HeroSection({
 
           {cta}
         </div>
-      </section>
+      </Section>
     </>
   );
 }

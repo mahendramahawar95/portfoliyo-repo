@@ -92,7 +92,7 @@ export function AiSpotlight({
   if (!current) return null;
 
   return (
-    <Section className="py-3xl">
+    <Section className="">
       <div className="container">
     <div
       className={cn(
@@ -101,7 +101,7 @@ export function AiSpotlight({
       )}
     >
       {/* Tabs: a scrolling row with arrows on phones, a sticky column on desktop */}
-      <div className="flex items-center gap-2 max-lg:p-2 lg:contents">
+      <div className="flex items-center gap-2 max-lg:p-2 lg:contents overflow-auto">
         <button
           type="button"
           aria-label="Previous capability"
@@ -235,7 +235,7 @@ export function AiSpotlight({
               ))}
             </ul>
 
-            <div className="grid gap-sm sm:grid-cols-2">
+            <div className="grid gap-sm lg:grid-cols-2">
               <MetaBlock title="What we implement" items={current.implement} />
               <MetaBlock title="Ideal for" items={current.ideal} />
             </div>

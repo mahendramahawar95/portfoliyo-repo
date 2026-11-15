@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 import { cn } from "@repo/ui/lib/cn";
 import { markets as defaultMarkets, marketFlag, type Market } from "./markets";
 import { HoloGlobe } from "./holo-globe";
+import { Section } from "@repo/ui";
 
 export interface MarketsHoloProps {
   badge?: string;
@@ -36,10 +37,10 @@ export function MarketsHolo({
   if (!market) return null;
 
   return (
-    <section
+    <Section
       id="markets-we-serve"
       aria-labelledby="markets-heading"
-      className={cn("relative isolate overflow-hidden py-3xl", className)}
+      className={cn("relative isolate overflow-hidden", className)}
     >
       <div className="container">
       {/* Atmosphere: two glows and a slow scan line */}
@@ -49,7 +50,7 @@ export function MarketsHolo({
         <span className="absolute inset-x-0 h-px animate-scan bg-linear-to-r from-transparent via-trust-blue/30 to-transparent" />
       </div>
 
-      <div className="mx-auto max-w-default px-md">
+      <div className="mx-auto max-w-default">
         {/* Header */}
         <div className="mx-auto mb-xl animate-fade-up text-center">
           <span className="mb-md inline-flex items-center gap-2 rounded-pill bg-white px-4 py-2 shadow-sm">
@@ -153,6 +154,6 @@ export function MarketsHolo({
         </div>
       </div>
       </div>
-    </section>
+    </Section>
   );
 }

@@ -5,6 +5,7 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { cn } from "@repo/ui/lib/cn";
 import Image from "next/image";
+import { Section } from "@repo/ui";
 
 export interface TechItem {
   name: string;
@@ -102,12 +103,12 @@ export function TechStack({
   const activeItem = activeLane?.items.find((item) => item.name === active);
 
   return (
-    <section
+    <Section
       aria-labelledby="tech-stack-title"
-      className={cn("relative z-1 py-3xl", className)}
+      className={cn("relative z-1", className)}
     >
       <div className="container">
-      <div className="mx-auto max-w-default p-md">
+      <div className="mx-auto max-w-default">
         {/* Header */}
         <div className="mb-xl grid items-end gap-md lg:grid-cols-12">
           <div className="lg:col-span-6">
@@ -202,6 +203,6 @@ export function TechStack({
         </div>
       </div>
       </div>
-    </section>
+    </Section>
   );
 }

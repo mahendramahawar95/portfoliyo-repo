@@ -63,10 +63,10 @@ export function AiPractice({
   return (
     <Section
       aria-label="Where AI shows up"
-      className={cn("relative z-1 py-3xl text-ice", className)}
+      className={cn("relative z-1 text-ice", className)}
     >
       <div className="container">
-      <div className="mx-auto max-w-default px-md">
+      <div className="mx-auto max-w-default">
         <div className="mb-xl grid animate-fade-up items-end gap-md lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Badge className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2">

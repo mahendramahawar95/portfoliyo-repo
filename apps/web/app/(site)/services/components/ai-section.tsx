@@ -1,7 +1,7 @@
 // apps/web/components/sections/ai-section.tsx
 import type { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
-import { Badge, Button, SectionHeading } from "@repo/ui";
+import { Badge, Button, Section, SectionHeading } from "@repo/ui";
 import { cn } from "@repo/ui/lib/cn";
 
 export interface AiSignal {
@@ -66,14 +66,14 @@ export function AiSection({
   className,
 }: AiSectionProps) {
   return (
-    <section
+    <Section
       className={cn(
         "relative overflow-hidden bg-linear-155 from-ink-900 from-0% via-ink-850 via-42% to-ink-750 py-ai-section text-ice",
         className,
       )}
     >
         <div className="container">
-      <div className="mx-auto max-w-default px-md">
+      <div className="mx-auto max-w-default">
         <div className="grid grid-cols-1 items-center gap-lg lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)]">
           {/* Left column */}
           <div>
@@ -150,6 +150,6 @@ export function AiSection({
         </ul>
       </div>
       </div>
-    </section>
+    </Section>
   );
 }

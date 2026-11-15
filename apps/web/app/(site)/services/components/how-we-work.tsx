@@ -108,12 +108,12 @@ export function HowWeWork({
   return (
     <Section
       className={cn(
-        "relative isolate overflow-hidden bg-section-workflow pb-3xl pt-3xl text-white md:pb-0",
+        "py-3xl relative isolate overflow-hidden bg-section-workflow text-white md:pb-0",
         className,
       )}
     >
         <div className="container">
-      <div className="mx-auto max-w-default px-md">
+      <div className="mx-auto max-w-default">
         <div className="mb-2xl text-center">
           <Badge className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2">
             <span className="size-2 rounded-full bg-accent" aria-hidden="true" />

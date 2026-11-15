@@ -163,7 +163,7 @@ export default function Testimomials({
   return (
     <Section
       id="testimonial"
-      className="py-3xl bg-transparent overflow-hidden"
+      className=" bg-transparent overflow-hidden"
     >
       <div className="text-center">
         <Badge className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm ">

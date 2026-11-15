@@ -10,7 +10,7 @@ import {
   ShoppingCart,
   Truck,
 } from "lucide-react";
-import { Button } from "@repo/ui";
+import { Button, Section } from "@repo/ui";
 import { cn } from "@repo/ui/lib/cn";
 
 type Tone = "navy" | "soft" | "cyan" | "orange";
@@ -156,12 +156,12 @@ export function IndustriesSection({
   className,
 }: IndustriesSectionProps) {
   return (
-    <section
+    <Section
       aria-labelledby="industries-heading"
-      className={cn("relative z-1 py-3xl", className)}
+      className={cn("relative z-1", className)}
     >
       <div className="container">
-      <div className="mx-auto max-w-default px-md">
+      <div className="mx-auto max-w-default">
         {/* Header */}
         <div className="mb-xl grid items-end gap-md lg:grid-cols-12">
           <div className="lg:col-span-5">
@@ -268,6 +268,6 @@ export function IndustriesSection({
         </div>
       </div>
       </div>
-    </section>
+    </Section>
   );
 }

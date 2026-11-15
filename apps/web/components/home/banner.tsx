@@ -1,12 +1,12 @@
 // import Image from "next/image";
 // import { Hero, Button } from "@repo/ui";
 
-import { Button } from "@repo/ui";
+import { Button, Section } from "@repo/ui";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 export default function Banner() {
   return (
-    <section className="relative overflow-hidden glass-panel w-full">
+    <Section className="relative overflow-hidden glass-panel w-full">
       <Image
         src="/bg-banner-2.png"
         alt=""
@@ -80,6 +80,6 @@ export default function Banner() {
           />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

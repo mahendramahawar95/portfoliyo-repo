@@ -1,6 +1,6 @@
 // apps/web/components/sections/services-grid.tsx
 import type { ReactNode } from "react";
-import { Badge, Button, SectionHeading } from "@repo/ui";
+import { Badge, Button, Section, SectionHeading } from "@repo/ui";
 import { cn } from "@repo/ui/lib/cn";
 
 type Tone = "soft" | "cyan" | "orange" | "navy";
@@ -106,9 +106,9 @@ export function ServicesGrid({
   className,
 }: ServicesGridProps) {
   return (
-    <section className={cn("py-3xl", className)}>
+    <Section className={cn("py-3xl", className)}>
       <div className="container">
-        <div className="mx-auto max-w-default px-md">
+        <div className="mx-auto max-w-default">
           <div className="grid grid-cols-1 items-stretch gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {/* First cell: intro */}
             <div className="flex animate-fade-up items-center">
@@ -213,6 +213,6 @@ export function ServicesGrid({
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

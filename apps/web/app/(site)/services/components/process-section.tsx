@@ -1,7 +1,7 @@
 // apps/web/components/sections/process-section.tsx
 import type { ReactNode } from "react";
 import { Code2, Compass, PenTool, Rocket, ChevronRight } from "lucide-react";
-import { Badge, SectionHeading } from "@repo/ui";
+import { Badge, Section, SectionHeading } from "@repo/ui";
 import { cn } from "@repo/ui/lib/cn";
 
 type Tone = "cyan" | "soft" | "navy" | "orange";
@@ -101,9 +101,9 @@ export function ProcessSection({
   className,
 }: ProcessSectionProps) {
   return (
-    <section className={cn("py-3xl text-ink-900", className)}>
+    <Section className={cn("text-ink-900", className)}>
       <div className="container">
-      <div className="mx-auto max-w-default px-md">
+      <div className="mx-auto max-w-default">
         <div className="mb-xl grid items-end gap-md lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Badge className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
@@ -196,6 +196,6 @@ export function ProcessSection({
         </ol>
       </div>
       </div>
-    </section>
+    </Section>
   );
 }

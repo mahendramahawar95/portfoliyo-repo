@@ -4,6 +4,19 @@
 @source "../../../packages/ui/src/**/*.{ts,tsx}";
 
 @theme {
+  /* culture cards */
+    --shadow-culture-card: 0 1px 2px rgb(0 27 41 / 0.06), 0 10px 28px -12px rgb(0 27 41 / 0.16);
+  /* culture cards */
+    /* Careers banner */
+  --shadow-portrait: 0 1px 2px rgb(0 27 41 / 0.06), 0 18px 48px -12px rgb(0 27 41 / 0.28);
+  --shadow-chip: 0 1px 2px rgb(0 27 41 / 0.06), 0 12px 28px rgb(0 27 41 / 0.12);
+
+  --animate-node-pulse: node-pulse 3.2s ease-in-out infinite;
+  --animate-dash-flow: dash-flow 2.4s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-slow: float 9s ease-in-out infinite;
+
+   /* Careers banner */
   /* globe start css */
     --animate-scan: scan 8s linear infinite;
   /* globe and css */
@@ -301,6 +314,20 @@
   --z-index-card: 10;
 
 }
+
+/* career banner */
+@keyframes node-pulse {
+  0%, 100% { transform: scale(1);   opacity: 0.6; }
+  50%      { transform: scale(1.5); opacity: 1; }
+}
+@keyframes dash-flow {
+  to { stroke-dashoffset: -20; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+/* career banner */
 
 /* glob */
 @keyframes scan {

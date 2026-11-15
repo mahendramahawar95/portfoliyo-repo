@@ -20,28 +20,64 @@
 
 /* Orbit rings */
 
-.orbit-ring {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  border: 1px solid var(--color-border-strong);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+/* Parent must be positioned */
+.orbit {
+  position: relative;
 }
 
+/* Base ring: centered ellipse, never blocks clicks */
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  border: 1px solid var(--color-border-strong);
+}
+
+/* Outer ring: dashed, thicker, with a glow */
 .orbit-ring--outer {
   width: 82%;
   height: 64%;
-  border-color: var(--color-trust-blue);
-  opacity: 0.2;
+  border: 2px dashed var(--color-orbit-ring); /* rgb(3 167 255 / 0.5) */
+  box-shadow:
+    0 0 24px rgb(3 167 255 / 0.25),
+    inset 0 0 24px rgb(3 167 255 / 0.12);
 }
 
+/* Inner ring: fainter second path */
 .orbit-ring--inner {
-  width: 60%;
-  height: 46%;
-  border-style: dashed;
-  opacity: 0.25;
+  width: 58%;
+  height: 44%;
+  border-color: color-mix(in oklab, var(--color-trust-blue) 30%, transparent);
+}
+
+/* Dot that travels along the outer ring */
+.orbit-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  pointer-events: none;
+  background: var(--color-trust-blue);
+  box-shadow: 0 0 12px var(--color-trust-blue);
+  /* Half of the outer ring's width and height: 82% / 2 and 64% / 2 */
+  offset-path: ellipse(41% 32% at 50% 50%);
+  animation: orbit-travel 12s linear infinite;
+}
+
+@keyframes orbit-travel {
+  from { offset-distance: 0%; }
+  to   { offset-distance: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-dot {
+    animation: none;
+  }
 }
 
 /* Central circle */
@@ -211,13 +247,15 @@ z-index: 1;
 
 @keyframes orbit-depth {
   0%, 49.99% {
-    z-index: 1;
-    opacity: 0.65;
+     z-index: 10;
+    opacity: 1;
   }
 
   50%, 100% {
-    z-index: 10;
-    opacity: 1;
+  
+
+     z-index: 1;
+    opacity: 0.65;
   }
 }
 
