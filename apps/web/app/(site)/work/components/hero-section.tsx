@@ -1,5 +1,5 @@
 import { Badge, Button, Section, SectionHeading } from "@repo/ui";
-import { OrbitCards } from "../../../../components/home/OrbitCards";
+import { OrbitCards } from "../../../../components/shared/orbit-cards/OrbitCards";
 import { ArrowRight } from "lucide-react";
 interface Metric {
   value: string;

@@ -12,7 +12,7 @@ import { ScaleDock } from "../../components/home/scale-dock";
 import { Faq } from "../../components/home/faq";
 import { PreFooterBillboard } from "../../components/home/billboard";
 import { HeroSection } from "../../components/home/hero-section";
-import { OrbitCards } from "../../components/home/OrbitCards";
+import { OrbitCards } from "../../components/shared/orbit-cards/OrbitCards";
 
 
 export default function Page() {

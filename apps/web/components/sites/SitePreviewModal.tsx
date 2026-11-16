@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Site } from "../../app/types/site";
+import { Site } from "../../types/site";
 const devices = {
   desktop: "max-w-full",
   tablet: "max-w-[820px]",

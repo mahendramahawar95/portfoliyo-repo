@@ -1,5 +1,5 @@
 import { Badge, Button, Section, SectionHeading } from "@repo/ui";
-import { OrbitCards } from "../../../../components/home/OrbitCards";
+import { OrbitCards } from "../../../../components/shared/orbit-cards/OrbitCards";
 import { ArrowRight } from "lucide-react";
 interface Metric {
   value: string;
@@ -39,7 +39,7 @@ export default function HeroSection() {
                 Start a Project
                 <ArrowRight className="size-icon" aria-hidden="true" />
               </Button>
-              <Button variant={"primary"} className="text-background">
+              <Button variant={"outline"} className="text-background">
                 View our services
                 <ArrowRight className="size-icon" aria-hidden="true" />
               </Button>

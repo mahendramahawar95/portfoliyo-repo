@@ -315,6 +315,31 @@
 
 }
 
+
+/* ---- Button ripple ----
+   Usage: <button class="ripple-host">...<span class="ripple" style={{ left, top, width, height }} /></button> */
+@utility ripple-host {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 9999px;
+  transform: scale(0);
+  background: oklch(100% 0 0 / 0.35);
+  pointer-events: none;
+  animation: ripple-expand 600ms ease-out forwards;
+}
+
+@keyframes ripple-expand {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
 /* career banner */
 @keyframes node-pulse {
   0%, 100% { transform: scale(1);   opacity: 0.6; }

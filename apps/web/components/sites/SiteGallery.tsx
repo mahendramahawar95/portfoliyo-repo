@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import SiteCard from "./SiteCard";
 import SitePreviewModal from "./SitePreviewModal";
-import { Site } from "../../app/types/site";
+import { Site } from "../../types/site";
 import { Section } from "@repo/ui";
 
 export default function SiteGallery({ sites }: { sites: Site[] }) {

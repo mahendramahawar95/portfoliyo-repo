@@ -260,7 +260,16 @@ z-index: 1;
 }
 
 /* Responsive */
-
+@media (max-width: 500px) {
+  .orbit-card-position {
+   offset-path: ellipse(37% 31% at 86% 91%);
+  }
+}
+@media (max-width: 410px) {
+  .orbit-card-position {
+   offset-path: ellipse(37% 31% at 84% 91%);
+  }
+}
 @media (max-width: 640px) {
   .orbit-scene {
     width: 100%;
@@ -277,9 +286,9 @@ z-index: 1;
     height: 48%;
   }
 
-  .orbit-card-position {
-    offset-path: ellipse(47% 31% at 50% 50%);
-  }
+  /* .orbit-card-position {
+   offset-path: ellipse(37% 31% at 84% 91%);
+  } */
 
   .orbit-card {
     width: 125px;

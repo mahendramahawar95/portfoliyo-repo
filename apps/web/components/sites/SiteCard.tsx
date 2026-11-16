@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Site } from "../../app/types/site";
+import { Site } from "../../types/site";
 
 type Props = { site: Site; onPreview: (site: Site) => void };
 
