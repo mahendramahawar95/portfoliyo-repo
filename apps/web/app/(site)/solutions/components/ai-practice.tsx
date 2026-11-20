@@ -79,18 +79,18 @@ export function AiPractice({
             <SectionHeading
               align="left"
               heading={heading}
-              headingClass="m-0 font-bold tracking-tight text-white"
+              headingClass="m-0 font-bold tracking-tight text-white dot-after"
               className="mb-0 mt-4"
             />
           </div>
 
-          <p className="text-body text-ice/70 lg:col-span-4 lg:col-start-9">
+          <p className="text-lg text-ice/70 lg:col-span-4 lg:col-start-9">
             {intro}
           </p>
         </div>
 
         {/* Rail: stacked on phones, three columns from md */}
-        <div className="grid overflow-hidden rounded-card border border-trust-blue/20 bg-ink-900/35 md:grid-cols-3">
+        <div className="grid overflow-hidden rounded-card border border-trust-blue/20 bg-fade md:grid-cols-3">
           {items.map((item, i) => (
             <article
               key={item.title}

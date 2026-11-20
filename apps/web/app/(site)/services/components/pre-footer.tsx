@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { ArrowRight } from "lucide-react";
 import { Button, Section } from "@repo/ui";
 import { cn } from "@repo/ui/lib/cn";
+import AnimatedGridBackground from "../../../../components/animations/AnimatedGridBackground";
 
 export interface ImpactNumber {
   value: string;
@@ -64,7 +65,7 @@ export function PreFooter({
             <h3 className="mb-md text-h3 font-bold tracking-tight text-primary-dark">
               {heading}
             </h3>
-            <p className="mb-lg text-body text-content-secondary">{description}</p>
+            <p className="mb-lg text-lg text-content-secondary">{description}</p>
 
             <div className="mt-auto">{cta}</div>
           </div>
@@ -72,13 +73,14 @@ export function PreFooter({
           {/* Right: impact numbers */}
           <div className="relative flex h-full items-center justify-center overflow-hidden rounded-card bg-linear-155 from-ink-900 via-ink-800 to-ink-700 text-white lg:col-span-7">
             {/* Decorative layers */}
+            {/* <span
+              aria-hidden="true"
+              className="pointer-events-none absolute inset-0 bg-grid-lines bg-size-[3rem_3rem] mask-[radial-gradient(ellipse_at_top_right,#000,transparent_70%)] rtl:mask-[radial-gradient(ellipse_at_top_left,#000,transparent_70%)]"
+            /> */}
+            <AnimatedGridBackground theme="dark"/>
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-grid-lines bg-size-[3rem_3rem] [mask-image:radial-gradient(ellipse_at_top_right,#000,transparent_70%)] rtl:[mask-image:radial-gradient(ellipse_at_top_left,#000,transparent_70%)]"
-            />
-            <span
-              aria-hidden="true"
-              className="pointer-events-none absolute -bottom-15 -start-10 size-50 rounded-full bg-white/4"
+              className="pointer-events-none absolute -bottom-15 -inset-s-10 size-50 rounded-full bg-white/4"
             />
 
             <div className="relative w-full p-xl lg:w-10/12">
@@ -90,7 +92,7 @@ export function PreFooter({
                 {stats.map((stat) => (
                   <li
                     key={stat.label}
-                    className="border-s-2 border-trust-orange/75 ps-4 transition duration-300 hover:-translate-y-1 hover:border-trust-orange"
+                    className="border-s-2 border-primary ps-4"
                   >
                     <strong className="mb-1.4 block text-h4 font-bold leading-tight tracking-tight">
                       {stat.value}

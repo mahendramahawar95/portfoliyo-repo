@@ -32,10 +32,10 @@ export interface AiSectionProps {
   capabilities?: AiCapability[];
   className?: string;
 }
-export default function AiOrbitSection({ signals = defaultSignals}: AiSectionProps){
+export default function AiOrbitSection({ signals = defaultSignals, className }: AiSectionProps){
     return(
 
-        <div aria-hidden="true" className="relative mx-auto aspect-square w-full">
+        <div aria-hidden="true" className={cn("relative mx-auto aspect-square w-full", className)}>
             {/* Core orb with two rotating rings */}
             <div className="absolute inset-0 m-auto size-[34%] rounded-full border border-sky-glow/30 bg-radial-[at_30%_25%] from-trust-blue/55 via-ink-750 to-ink-900 shadow-orb">
               <span className="absolute inset-[-30%] animate-orbit rounded-full border border-sky-glow/25 [--orbit-duration:18s] before:absolute before:left-0 before:top-1/2 before:size-2.2 before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:bg-trust-blue before:shadow-dot-blue before:h-3 before:w-3" />

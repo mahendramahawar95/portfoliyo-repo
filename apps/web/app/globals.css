@@ -172,11 +172,13 @@
    --color-primary:     oklch(0.71 0.19 47.88); 
   --color-primary-dark: oklch(0.209 0.044 234);   
   --color-surface:      oklch(0.967 0 0);        
-  --color-secondary:    oklch(0.683 0.154 54.7);  
+  --color-secondary:   oklch(0.7 0.17 243.44);  
   --color-border:       oklch(0.922 0 0);         
   --color-para: oklch(0.51 0 0);
   --color-primary-light: oklch(0.70 0.16 285);
   --color-primary-soft: oklch(0.94 0.04 285);
+  --color-fade:oklch(0.21 0.04 234.02 / 0.55);
+  --color-fade-second:oklch(0.21 0.04 234.02 / 0.78);
   --color-dark-bg:oklch(0.21 0.04 234.02);
 
   --color-secondary-light: oklch(0.85 0.08 240);
@@ -192,6 +194,8 @@
 
   --color-background: oklch(0.98 0.01 270);
   --color-foreground: oklch(0.23 0.06 277);
+  --color-fadeBg: oklch(1 0 0 / 0.06);
+  --color-border-2: oklch(0.83 0.1 230.33 / 0.28);
 
 
   --color-surface-secondary: oklch(0.97 0.015 270);
@@ -315,6 +319,19 @@
 
 }
 
+
+@utility dot-after {
+  &::after {
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-inline-start: 0.25rem;
+    border-radius: 9999px;
+    background-color: var(--color-accent);
+    vertical-align:end;
+  }
+}
 
 /* ---- Button ripple ----
    Usage: <button class="ripple-host">...<span class="ripple" style={{ left, top, width, height }} /></button> */

@@ -156,7 +156,7 @@ export function AboutContent({
           <h2 className="mb-md text-h2 font-bold tracking-tight text-primary-dark">
             {heading}
           </h2>
-          <p className="text-body text-content-secondary">{lede}</p>
+          <p className="text-lg text-content-secondary">{lede}</p>
         </div>
 
         <div className="mx-auto grid items-stretch gap-lg lg:w-11/12 lg:grid-cols-12">
@@ -172,7 +172,7 @@ export function AboutContent({
               className="absolute inset-0 size-full object-cover"
             />
             <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-ink-900/90 via-ink-900/60 to-transparent p-lg pt-2xl">
-              <p className="text-body text-white">{overlayText}</p>
+              <p className="text-lg text-white">{overlayText}</p>
             </div>
           </div>
 

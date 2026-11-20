@@ -215,7 +215,7 @@ export function ContactSection({
               <h2 className="mb-2 text-h4 font-bold leading-tight tracking-tight text-primary-dark">
                 {formTitle}
               </h2>
-              <p className="mb-lg text-body text-content-secondary">{formIntro}</p>
+              <p className="mb-lg text-lg text-content-secondary">{formIntro}</p>
 
               <form onSubmit={handleSubmit} className="grid gap-lg sm:grid-cols-2">
                 {fields.map((field) => (

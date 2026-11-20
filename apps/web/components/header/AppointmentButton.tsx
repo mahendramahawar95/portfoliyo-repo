@@ -8,7 +8,7 @@ export default function AppointmentButton() {
       size="md"
       className="text-background rounded-sm h-11.5"
     >
-      <Link href="/login">Login</Link>
+      <Link href="/contact">Contact Us</Link>
     </Button>
   );
 }

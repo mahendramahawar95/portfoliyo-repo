@@ -93,8 +93,9 @@ const tones: Record<
 };
 
 export function ProcessSection({
-  badge = "Our Process",
-  heading = "A process built for predictable delivery",
+  badge = "How It Works",
+  heading = (<div className="">From Idea to Launch -
+<span className="text-secondary block dot-after">A Clear Path Forward</span> </div>),
   description,
   intro = "Every project follows a proven, transparent process. No surprises - just consistent delivery from the first conversation to the final deployment.",
   steps = defaultSteps,
@@ -123,7 +124,7 @@ export function ProcessSection({
             />
           </div>
 
-          <p className="text-body text-content-secondary lg:col-span-4 lg:col-start-9">
+          <p className="text-lg text-content-secondary lg:col-span-4 lg:col-start-9">
             {intro}
           </p>
         </div>

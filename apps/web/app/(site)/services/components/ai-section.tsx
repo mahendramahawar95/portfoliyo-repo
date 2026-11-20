@@ -42,19 +42,19 @@ const defaultCapabilities: AiCapability[] = [
 const defaultActions = (
   <>
     <Button variant="primary" className="text-background">
-      Start a Project
+     Explore AI @ Apoxeo
       <ArrowRight className="size-icon" aria-hidden="true" />
     </Button>
     <Button variant="primary" className="text-background">
-      View our services
+      Talk to an engineer 
       <ArrowRight className="size-icon" aria-hidden="true" />
     </Button>
   </>
 );
 
 export function AiSection({
-  badge = "Digital Product Studio",
-  heading = "Building Digital Products That Scale With Your Business.",
+  badge = "AI Capabilities",
+  heading = (<div className="dot-after">Intelligence that <span className="text-secondary">compounds</span>  with every release</div>),
   description = "fullstackdev helps forward-thinking startups and businesses bring ideas to life through intelligent, high-performance digital solutions - combining smart development, automation, and clean design.",
   actions = defaultActions,
  
@@ -94,8 +94,9 @@ export function AiSection({
 
           {/* Right column: decorative AI stage */}
           {/* Visual */}
-          <AiOrbitSection/>
-          
+          <div >
+          <AiOrbitSection className="max-w-100 "/>
+          </div>
         </div>
 
         {/* Capabilities */}

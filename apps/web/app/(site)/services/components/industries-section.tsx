@@ -140,7 +140,7 @@ export function IndustriesSection({
     <>
       Deep Domain Knowledge
       <br />
-      <span className="text-primary">Across Every Vertical</span>
+      <span className="text-secondary dot-after">Across Every Vertical</span>
     </>
   ),
   intro = "We have shipped products across a wide range of industries. That cross-domain experience means we bring pattern recognition - and proven solutions - to every new challenge.",
@@ -179,7 +179,7 @@ export function IndustriesSection({
             </h2>
           </div>
 
-          <p className="text-body text-content-secondary lg:col-span-5 lg:col-start-8">
+          <p className="text-lg text-content-secondary lg:col-span-5 lg:col-start-8">
             {intro}
           </p>
         </div>

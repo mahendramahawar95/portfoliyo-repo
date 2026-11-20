@@ -65,7 +65,7 @@ export function MarketsHolo({
           >
             {heading}
           </h2>
-          <p className="text-body text-content-secondary">{lede}</p>
+          <p className="text-lg text-content-secondary">{lede}</p>
         </div>
 
         <div className="grid items-stretch gap-xl lg:grid-cols-12">

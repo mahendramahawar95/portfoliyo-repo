@@ -84,7 +84,7 @@ function StepColumn({ steps, offset, mirrored, delay = 0 }: StepColumnProps) {
             <h3 className="mb-2 text-body-lg font-semibold leading-snug tracking-tight text-white">
               {step.title}
             </h3>
-            <p className="max-w-[28ch] text-small leading-relaxed text-white/58">
+            <p className="max-w-[28ch] text-md leading-relaxed text-white/58">
               {step.description}
             </p>
           </div>

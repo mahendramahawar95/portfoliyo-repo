@@ -10,7 +10,7 @@ export default function Page() {
  
   return (
 <div className="relative">
-<AnimatedGridBackground theme="dark" className="bg-transparent" cellSize={45} />
+<AnimatedGridBackground theme="dark" className="" cellSize={45} />
 <AiHero/>
 <AiSpotlight/>
 <AiPractice/>

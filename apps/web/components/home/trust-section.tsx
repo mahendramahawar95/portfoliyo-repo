@@ -49,7 +49,13 @@ export function TrustSection() {
           <SectionHeading
             align="center"
             descClass=""
-            heading="Engineering that holds up when the business scales."
+            heading={(
+  <>
+    Engineering that holds up when the business <span className="text-fade dot-after">scales</span> 
+   
+  </>
+)}
+           
             description="We build digital products that are secure, scalable, and maintainable, so your business can grow without limits."
             headingClass="mb-4 mt-4 font-bold tracking-tight text-primary-dark max-w-[738px]"
             className="mb-0"

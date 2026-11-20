@@ -92,7 +92,7 @@ export function OpeningsSection({
           <h2 className="mb-md text-h2 font-bold tracking-tight text-primary-dark">
             {heading}
           </h2>
-          <p className="text-body text-content-secondary">{lead}</p>
+          <p className="text-lg text-content-secondary">{lead}</p>
         </div>
 
         {/* Job list */}

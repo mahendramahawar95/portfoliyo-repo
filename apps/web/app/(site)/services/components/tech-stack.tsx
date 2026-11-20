@@ -5,7 +5,7 @@ import { useState } from "react";
 import type { ReactNode } from "react";
 import { cn } from "@repo/ui/lib/cn";
 import Image from "next/image";
-import { Section } from "@repo/ui";
+import { Badge, Section, SectionHeading } from "@repo/ui";
 
 export interface TechItem {
   name: string;
@@ -111,26 +111,28 @@ export function TechStack({
       <div className="mx-auto max-w-default">
         {/* Header */}
         <div className="mb-xl grid items-end gap-md lg:grid-cols-12">
-          <div className="lg:col-span-6">
-            <span className="mb-md inline-flex items-center gap-2 rounded-pill bg-white px-4 py-2 shadow-sm">
-              <span className="size-2 rounded-pill bg-accent" aria-hidden="true" />
-              <span className="text-xs font-medium uppercase tracking-widest text-muted">
-                {badge}
-              </span>
-            </span>
-            <h2
-              id="tech-stack-title"
-              className="text-h2 font-bold tracking-tight text-primary-dark"
-            >
-              {heading}
-            </h2>
-          </div>
-
-          <p className="text-body text-content-secondary lg:col-span-5 lg:col-start-8">
-            {lede}
-          </p>
-        </div>
-
+                  <div className="lg:col-span-5">
+                    <Badge className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 shadow-sm">
+                      <span className="size-2 rounded-full bg-accent" aria-hidden="true" />
+                      <span className="text-xs font-medium uppercase tracking-widest text-muted">
+                        {badge}
+                      </span>
+                    </Badge>
+        
+                    <SectionHeading
+                      align="left"
+                      descClass="text-left"
+                      heading={heading}
+                      description=""
+                      headingClass="m-0 font-bold tracking-tight text-primary-dark dot-after"
+                      className="mb-0 mt-4"
+                    />
+                  </div>
+        
+                  <p className="text-lg text-content-secondary lg:col-span-4 lg:col-start-9">
+                    {lede}
+                  </p>
+                </div>
         {/* Atlas */}
         <div className="flex flex-col p-md gap-md rounded-xl border border-ink-900/8 bg-tech-atlas p-4.6 backdrop-blur-sm">
           {lanes.map((lane, i) => {

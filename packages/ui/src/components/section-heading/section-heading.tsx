@@ -40,7 +40,7 @@ export function SectionHeading({
       {description && (
         <p
           className={cn(
-            "max-w-[60ch] text-body text-content-secondary",
+            "max-w-[60ch] text-lg text-content-secondary",
             descClass,
           )}
         >

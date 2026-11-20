@@ -28,11 +28,11 @@ export default function HeroSection() {
             </Badge>
             <SectionHeading
               align="left"
-              descClass="text-left"
-              heading="Building Digital Products That Scale With Your Business."
-              description="fullstackdev helps forward-thinking startups and businesses bring ideas to life through intelligent, high-performance digital solutions - combining smart development, automation, and clean design."
-              headingClass="m-0 font-bold tracking-tight text-primary-dark "
-              className="mt-4 mb-4"
+              descClass="text-fade-second"
+              heading={(<>Building Digital Products That <span className="text-secondary"> Scale </span> With Your <span>Business.</span></>)}
+              description={(<>fullstackdev helps forward-thinking startups and businesses bring ideas to life through intelligent, <span className="text-fade">high-performance digital solutions - combining smart development, automation, and clean design.</span></>)}
+              headingClass="m-0 font-extrabold tracking-tight text-primary-dark "
+              className="mt-4 mb-4" 
             />
             <div className="mt-sm flex flex-wrap items-center gap-sm">
               <Button variant={"primary"} className="text-background">
@@ -46,13 +46,13 @@ export default function HeroSection() {
             </div>
             <div
               role="list"
-              className="grid grid-cols-1 border-t border-border pt-10 sm:grid-cols-3"
+              className="grid mt-lg grid-cols-1 border-t border-ink-900/10 pt-md sm:grid-cols-3 flex-col gap-2  "
             >
               {metrics.map((m) => (
                 <div
                   key={m.label}
                   role="listitem"
-                  className="flex flex-col gap-1 py-sm max-sm:not-first:border-t max-sm:not-first:border-white/10 sm:border-s sm:border-white/10 sm:px-sm sm:nth-[3n+1]:border-s-0 sm:nth-[3n+1]:ps-0"
+                  className="max-sm:not-first:border-t max-sm:not-first:border-ink-900/10 max-sm:not-first:pt-2 sm:border-s sm:border-ink-900/10 sm:ps-md sm:nth-[3n+1]:border-s-0 sm:nth-[3n+1]:ps-0"
                 >
                   <h4 className="text-h4 primary-dark font-bold leading-none">
                     {m.value}

@@ -121,7 +121,7 @@ export function PerksSection({
           <h2 className="mb-md text-h2 font-bold tracking-tight text-primary-dark">
             {heading}
           </h2>
-          <p className="text-body text-content-secondary">
+          <p className="text-lg text-content-secondary">
             {lead} <span className="font-medium text-primary-dark">{leadStrong}</span>
           </p>
         </div>
